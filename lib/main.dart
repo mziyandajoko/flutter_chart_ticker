@@ -14,7 +14,7 @@ void main() async {
   // your own ".env" file in the root level folder (which has pubspec.yaml)
   // and get your own api key.
   await FlutterConfig.loadEnvVariables();
-  final apiKey = FlutterConfig.get('ApiKey').toString();
+  final apiKey = FlutterConfig.get('apiKey').toString();
   final api = Api(Api.buildDefaultHttpClient(apiKey));
 
   runApp(MyApp(api: api));
@@ -33,9 +33,9 @@ class MyApp extends StatelessWidget {
     return BlocProvider(
       create: (_) => AppStateCubit(api),
       child: MaterialApp(
-        title: 'Flutter stock ticker',
-        theme: ThemeData.dark().copyWith(
-          scaffoldBackgroundColor: Colors.black,
+        title: 'Flutter Stock Ticker',
+        theme: ThemeData.light().copyWith(
+          scaffoldBackgroundColor: Colors.white,
           appBarTheme: AppBarTheme(
             color: Colors.red[900]!,
           ),

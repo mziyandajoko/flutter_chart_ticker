@@ -13,7 +13,7 @@ class SearchPageState extends State<SearchPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("STONKS"),
+        title: const Text("Flutter Stock Ticker"),
       ),
       body: const SingleChildScrollView(
         child: SearchForm(),

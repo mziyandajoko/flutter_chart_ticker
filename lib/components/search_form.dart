@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/src/provider.dart';
 
+import '../utils/date_time_helper.dart';
 import '../models/get_candles_request.dart';
 import '../state/bloc.dart';
 import 'chart_page.dart';
@@ -82,10 +83,10 @@ class SearchFormState extends State<SearchForm> {
       builder: (field) {
         final textColor = field.hasError ? Colors.red : null;
         return ListTile(
-          // title: Text(
-          //   endDate?.dayMonthYearLabel ?? "End date",
-          //   style: TextStyle(color: textColor),
-          // ),
+          title: Text(
+            endDate?.dayMonthYearLabel ?? "End date",
+            style: TextStyle(color: textColor),
+          ),
           subtitle: Text(field.errorText ?? "Plot to the end of this day"),
           onTap: () async {
             final date = await showDatePicker(
@@ -123,10 +124,10 @@ class SearchFormState extends State<SearchForm> {
         final textColor = field.hasError ? Colors.red : null;
 
         return ListTile(
-          // title: Text(
-          //   startDate?.dayMonthYearLabel ?? "Start date",
-          //   style: TextStyle(color: textColor),
-          // ),
+          title: Text(
+            startDate?.dayMonthYearLabel ?? "Start date",
+            style: TextStyle(color: textColor),
+          ),
           subtitle: Text(field.errorText ?? "Plot from the start of this day"),
           onTap: () async {
             final date = await showDatePicker(

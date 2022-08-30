@@ -57,11 +57,12 @@ class ChartPageState extends State<ChartPage> {
                 height: 200,
                 width: 200,
                 child: LoadingIndicator(
-                  indicatorType: Indicator.audioEqualizer,
+                  indicatorType: Indicator.ballRotate,
                   backgroundColor: color,
                   pathBackgroundColor: color,
                   colors: const [
                     Colors.red,
+                    Colors.blue,
                     Colors.green,
                   ],
                 ),
